@@ -20,6 +20,7 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
+import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 import java.util.Properties;
 
@@ -29,8 +30,8 @@ import java.util.Properties;
 @EnableTransactionManagement
 @EnableWebMvc
 public class SpringConfig implements WebMvcConfigurer {
-    private final ApplicationContext applicationContext;
 
+    private final ApplicationContext applicationContext;
     private final Environment env;
 
     @Autowired
@@ -38,6 +39,7 @@ public class SpringConfig implements WebMvcConfigurer {
         this.applicationContext = applicationContext;
         this.env = env;
     }
+
 
     @Bean
     public SpringResourceTemplateResolver templateResolver() {
@@ -104,4 +106,5 @@ public class SpringConfig implements WebMvcConfigurer {
         return jpaTransactionManager;
 
     }
+
 }

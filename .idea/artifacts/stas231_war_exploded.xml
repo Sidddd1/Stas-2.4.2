@@ -4,7 +4,7 @@
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="stas231" />
+          <element id="module-output" name="stas2.4.2" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.1.RELEASE" />
@@ -48,6 +48,9 @@
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:2.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:2.3.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.9.6" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.2.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.2.1.RELEASE" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="stas231/web/Web" />

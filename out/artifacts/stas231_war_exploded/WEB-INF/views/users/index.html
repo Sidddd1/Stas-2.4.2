@@ -16,11 +16,13 @@
         <tbody>
         <tr th:each="user : ${user}">
             <td >
-                <a th:href="@{/users/{id}(id=${user.getId()})}"
+                <a th:href="@{/admin/users/{id}(id=${user.getId()})}"
                    th:text="${user.getName()}">user</a>
             </td>
             <td th:text="${user.getAge()}"/>
             <td th:text="${user.getEmail()}"/>
+            
+
         </tr>
         </tbody>
 
@@ -28,7 +30,8 @@
     <br/>
     <hr/>
 
-    <a href="/users/new">Create new user</a>
+    <a href="/admin/users/new">Create new user</a>
+    <a href="/logout">Logout</a>
 
 </body>
 </html>
