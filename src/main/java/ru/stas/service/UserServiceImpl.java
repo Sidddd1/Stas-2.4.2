@@ -19,19 +19,17 @@ import java.util.List;
 public class UserServiceImpl implements UserService, UserDetailsService {
 
 
-
     private final UserDao userDao;
 
 
-
     @Autowired
-    public UserServiceImpl(UserDao userDao ) {
+    public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
 
     }
 
     @Override
-    public List<User> listUsers()    {
+    public List<User> listUsers() {
         return userDao.listUsers();
     }
 
@@ -72,7 +70,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), user.getAuthorities());
     }
 
-    private User findByUsername(String username){
+    private User findByUsername(String username) {
         return userDao.findUserByUsername(username);
     }
 }

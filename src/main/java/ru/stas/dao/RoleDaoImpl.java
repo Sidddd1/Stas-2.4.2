@@ -10,17 +10,17 @@ import java.util.List;
 
 @Repository
 @Transactional
-public class RoleDaoImpl implements RoleDao{
+public class RoleDaoImpl implements RoleDao {
 
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
     public List<Role> getRoles() {
-        return entityManager.createQuery("select r from Role r",Role.class).getResultList();
+        return entityManager.createQuery("select r from Role r", Role.class).getResultList();
     }
 
-    public void save(Role role){
+    public void save(Role role) {
         entityManager.persist(role);
     }
 }

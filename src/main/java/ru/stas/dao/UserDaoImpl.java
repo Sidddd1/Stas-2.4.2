@@ -32,7 +32,7 @@ public class UserDaoImpl implements UserDao {
 
     public User findUserByUsername(String username) {
         try {
-            Query query = entityManager.createQuery("from User where email = :username",User.class);
+            Query query = entityManager.createQuery("from User where email = :username", User.class);
             query.setParameter("username", username);
             User user = (User) query.getSingleResult();
             System.out.println(user.getUsername());

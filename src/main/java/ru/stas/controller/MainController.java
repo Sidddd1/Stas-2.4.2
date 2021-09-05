@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import ru.stas.service.UserService;
 
 
-
 @Controller
 public class MainController {
     private final UserService userService;
@@ -16,8 +15,8 @@ public class MainController {
     }
 
     @GetMapping
-    public String start(){
-       return  "redirect:/login";
+    public String start() {
+        return "redirect:/login";
     }
 
     @GetMapping("/user/{id}")
