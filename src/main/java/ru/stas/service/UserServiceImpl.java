@@ -13,7 +13,6 @@ import ru.stas.model.User;
 import java.util.List;
 
 @Service
-@Transactional
 public class UserServiceImpl implements UserService, UserDetailsService {
 
     private final UserDao userDao;
