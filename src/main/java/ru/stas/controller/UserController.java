@@ -7,10 +7,10 @@ import ru.stas.service.UserService;
 
 
 @Controller
-public class MainController {
+public class UserController {
     private final UserService userService;
 
-    public MainController(UserService userService) {
+    public UserController(UserService userService) {
         this.userService = userService;
     }
 

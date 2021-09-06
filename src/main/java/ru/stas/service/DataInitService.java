@@ -12,7 +12,6 @@ import java.sql.SQLException;
 @Service
 public class DataInitService {
 
-
     private final DataSource dataSource;
 
     public DataInitService(DataSource dataSource) {

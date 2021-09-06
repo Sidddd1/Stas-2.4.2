@@ -1,4 +1,4 @@
-package ru.stas.config;
+package ru.stas.config.security;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

@@ -6,26 +6,21 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.stas.config.SecurityConfig;
+import ru.stas.config.security.SecurityConfig;
 import ru.stas.dao.UserDao;
 import ru.stas.model.User;
 
-
 import java.util.List;
-
 
 @Service
 @Transactional
 public class UserServiceImpl implements UserService, UserDetailsService {
 
-
     private final UserDao userDao;
-
 
     @Autowired
     public UserServiceImpl(UserDao userDao) {
         this.userDao = userDao;
-
     }
 
     @Override

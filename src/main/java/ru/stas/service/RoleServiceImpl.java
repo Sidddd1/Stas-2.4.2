@@ -2,10 +2,10 @@ package ru.stas.service;
 
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.stas.dao.RoleDao;
 import ru.stas.model.Role;
 import ru.stas.model.User;
-
 import javax.annotation.PostConstruct;
 import java.util.HashSet;
 import java.util.List;
@@ -22,6 +22,7 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @Override
+    @Transactional
     public List<Role> getRoles() {
         return roleDao.getRoles();
     }
@@ -41,6 +42,7 @@ public class RoleServiceImpl implements RoleService {
     }
 
     @PostConstruct
+    @Transactional
     public void setDate() {
         Role role = new Role(1L, "ROLE_ADMIN");
         Role role2 = new Role(2L, "ROLE_USER");
